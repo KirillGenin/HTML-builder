@@ -9,7 +9,7 @@ process.stdout.write(
 );
 
 process.stdin.on('data', (data) => {
-  if (data.toString().trim() === 'exit') {
+  if (data.toString().trim().toLowerCase() === 'exit') {
     process.exit();
   } else {
     writeStream.write(data);
